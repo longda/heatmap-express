@@ -5,3 +5,11 @@ body {
 a {
   color: #00b7ff;
 }
+#heatMapArea {
+  background-image: url("../images/parish_overhead.jpg");
+  position: relative;
+  float: left;
+  width: 782px;
+  height: 782px;
+  border: 1px dashed #000;
+}
