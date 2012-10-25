@@ -28,6 +28,8 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+// setup routes
+app.get('/events/populate', api.populate);
 app.get('/events', api.findAllEvents);
 app.get('/events/:id', api.findByEventId);
 app.get('/', routes.index);
