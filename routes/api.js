@@ -83,8 +83,8 @@ exports.populate = function(req, res){
     var sample = new Event({
       killed_user_id: (Math.floor(Math.random() * 1000)),
       killer_user_id: (Math.floor(Math.random() * 1000)),
-      map_id: (Math.floor(Math.random() * 17)),
-      position: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100),Math.floor(Math.random() * 100)],
+      map_id: 1, //(Math.floor(Math.random() * 17)),
+      position: [Math.floor(Math.random() * 700) + 40, Math.floor(Math.random() * 700) + 40,Math.floor(Math.random() * 100)],
       rotation: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100),Math.floor(Math.random() * 100)],
       scale: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100),Math.floor(Math.random() * 100)],
       state: (Math.floor(Math.random() * 33)),
