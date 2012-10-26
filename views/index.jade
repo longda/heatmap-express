@@ -7,13 +7,25 @@ block content
   #container
     #heatMapArea
 
+  script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
   script(type='text/javascript', src='/lib/heatmap.js')
   script(type='text/javascript')
-    window.onload = function(){
-      // console.log('element', document.getElementById('heatMapArea'));
-      // console.log('style', document.getElementById('heatMapArea'))
+
+    //window.onload = function(){
+    $(document).ready(function(){
       var xx = h337.create({"element":document.getElementById("heatMapArea"), "radius":15, "visible":true});
-      xx.store.generateRandomDataSet(400);
+      $.ajax({
+        url: '/events/heatmap'
+        })
+      .done(function(heatData){
+        console.log('first data: ', heatData[0]);
+        xx.store.setDataSet({
+          max: 10,
+          data: heatData
+          })
+        });
+
+      //xx.store.generateRandomDataSet(400);
       /*
       var test = { max: 90, data: [
         {x: 100, y: 100, count: 80},
@@ -30,4 +42,5 @@ block content
         ]};
       xx.store.setDataSet(test);
       */
-    };
+    });
+    //};

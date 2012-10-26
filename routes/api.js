@@ -23,8 +23,6 @@ var eventSchema = new Schema({
 var Event = db.model('Event', eventSchema);
 
 exports.findAllEvents = function(req, res){
-  //res.json([{name:'event1'}, {name:'event2'}]);
-  //res.json([new Event({name: 'Event 1'}), new Event({name: 'Event 2'})]);
   return Event.find(function(err, events){
     if (!err) {
       res.json(events);
@@ -53,8 +51,11 @@ exports.findHeatMapData = function(req, res){
     return result;
   };
 
-  Event.mapReduce(o, function(err, events){
+  Event.mapReduce(o, function(err, results){
     if (!err){
+      events = results.map(function(input){
+        return { count: input.value.count, x: input.value.x, y: input.value.y };
+      });
       res.json(events);
     } else {
       return console.log(err);
