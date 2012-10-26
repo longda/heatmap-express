@@ -22,6 +22,85 @@ var eventSchema = new Schema({
 
 var Event = db.model('Event', eventSchema);
 
+exports.createEvent = function(req, res){
+  var newEvent = new Event({
+    killed_user_id: req.body.killed_user_id,
+    killer_user_id: req.body.killer_user_id,
+    map_id: req.body.map_id,
+    position: req.body.position,
+    rotation: req.body.rotation,
+    scale: req.body.scale,
+    state: req.body.state,
+    killed_weapon_id: req.body.killed_weapon_id,
+    killer_weapon_id: req.body.killer_weapon_id,
+    server: req.body.server,
+    datacenter: req.body.datacenter,
+    data: req.body.data,
+    utc_timestamp: Date.now()
+  });
+
+  newEvent.save(function(err){
+    if (!err){
+      console.log('create successful');
+    } else {
+      console.log(err);
+    }
+  });
+
+  return res.json(newEvent);
+};
+
+exports.getEvent = function(req, res){
+  return Event.findById(req.params.id, function(err, item){
+    if (!err){
+      return res.json(item);
+    } else {
+      return console.log(err);
+    }
+  });
+};
+
+exports.updateEvent = function(req, res){
+  return Event.findById(req.params.id, function(err, item){
+    item.killed_user_id = req.body.killed_user_id;
+    item.killer_user_id = req.body.killer_user_id;
+    item.map_id = req.body.map_id;
+    item.position = req.body.position;
+    item.rotation = req.body.rotation;
+    item.scale = req.body.scale;
+    item.state = req.body.state;
+    item.killed_weapon_id = req.body.killed_weapon_id;
+    item.killer_weapon_id = req.body.killer_weapon_id;
+    item.server = req.body.server;
+    item.datacenter = req.body.datacenter;
+    item.data = req.body.data;
+    item.utc_timestamp = Date.now();
+
+    return item.save(function(err){
+      if (!err){
+        console.log('update successful');
+      } else {
+        console.log(err);
+      }
+
+      return res.json(item);
+    });
+  });
+};
+
+exports.deleteEvent = function(req, res){
+  return Event.findById(req.params.id, function(err, item){
+    return item.remove(function(err){
+      if (!err){
+        console.log('delete successful');
+        return res.json(item);
+      } else {
+        console.log(err);
+      }
+    });
+  });
+};
+
 exports.findAllEvents = function(req, res){
   return Event.find(function(err, events){
     if (!err) {

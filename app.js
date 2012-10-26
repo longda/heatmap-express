@@ -32,8 +32,11 @@ app.configure('development', function(){
 app.get('/events/heatmap', api.findHeatMapData);
 app.get('/events/map/:id', api.findEventsByMapId);
 app.get('/events/populate', api.populate);
+app.post('/events/', api.createEvent);
+app.get('/events/:id', api.getEvent);
+app.put('/events/:id', api.updateEvent);
+app.delete('/events/:id', api.deleteEvent);
 app.get('/events', api.findAllEvents);
-app.get('/events/:id', api.findByEventId);
 app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
