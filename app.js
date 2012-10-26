@@ -29,6 +29,8 @@ app.configure('development', function(){
 });
 
 // setup routes
+app.get('/events/heatmap', api.findHeatMapData);
+app.get('/events/map/:id', api.findEventsByMapId);
 app.get('/events/populate', api.populate);
 app.get('/events', api.findAllEvents);
 app.get('/events/:id', api.findByEventId);
