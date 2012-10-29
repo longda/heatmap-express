@@ -19,9 +19,9 @@ Please document how much time you spend completing this task, as well as any not
 2. Download code from github
 3. cd into the heatmap-express directory
 4. Run the following command in the terminal to install all the packages:
-
-     npm install
-
+```
+npm install
+```
 
 ## Design Explanation
 
