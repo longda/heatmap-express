@@ -17,11 +17,9 @@ Please document how much time you spend completing this task, as well as any not
 ## Installation and Setup
 1. Install [Node with NPM](http://nodejs.org/)
 2. Download code from github
-3. cd into the heatmap-express directory
-4. Run the following command in the terminal to install all the packages:
-```
-npm install
-```
+3. cd into the heatmap-express directory: ``` $ cd heatmap-express ```
+4. Install all the packages: ``` $ npm install ```
+5. Run the app using node: ``` $ node app.js ``` or heroku: ``` $ foreman start ```
 
 ## Design Explanation
 
