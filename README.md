@@ -22,12 +22,14 @@ Please document how much time you spend completing this task, as well as any not
 6. Run the app using node: ``` $ node app.js ``` or heroku: ``` $ foreman start ```
 
 ## Design Explanation
+This sample pertains primarily to the storage system for events generated from "the game" and made into a REST API. At
+this time, no considerations have been made as to security regarding the calls into the API.
 
 ### Data Model
 
 ### Data Storage
 
-### Rest API
+### REST API
 
 ### Presentation
 
