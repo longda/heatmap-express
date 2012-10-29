@@ -1,6 +1,5 @@
 # Heatmap Express
 
-
 A coding sample... In order to gain visibility into how our players are experiencing our game, we want to collect data about each player death. This event would include such values as their location and how they died.
  
 The ultimate goal of this system would be to generate a heat map overlaid on top of a game map to indicate common death locations.
@@ -14,6 +13,13 @@ The ultimate goal of this system would be to generate a heat map overlaid on top
 2. Build a prototype in the language of your choice that exemplifies the core of your design and that can generate an accurate heat map from sample data – which you can provide.
  
 Please document how much time you spend completing this task, as well as any notes you feel are relevant. Also be prepared to defend your choices in terms of scalability, extensibility, and maintainability.
+
+## Installation and Setup
+
+
+
+## Design Explanation
+
 
 
 ## Technologies Used
