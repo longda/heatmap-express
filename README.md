@@ -20,3 +20,11 @@ Please document how much time you spend completing this task, as well as any not
 
 * [Node.js](http://www.nodejs.org/)
 * [Express.js](http://expressjs.com/)
+* [Heatmap.js](http://www.patrick-wied.at/static/heatmapjs/)
+* [Jquery](http://jquery.com/)
+* [Jade](http://jade-lang.com/)
+* [Stylus](http://learnboost.github.com/stylus/)
+* [Mongo DB](http://www.mongodb.org/)
+* [Mongoose](http://mongoosejs.com/)
+* [Heroku](http://www.heroku.com/)
+* [MongoLab](https://mongolab.com)
