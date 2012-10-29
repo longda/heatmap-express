@@ -1,5 +1,4 @@
 # Heatmap Express
-
 A coding sample... In order to gain visibility into how our players are experiencing our game, we want to collect data about each player death. This event would include such values as their location and how they died.
  
 The ultimate goal of this system would be to generate a heat map overlaid on top of a game map to indicate common death locations.
@@ -23,6 +22,21 @@ Please document how much time you spend completing this task, as well as any not
 6. Run the app using node: ``` $ node app.js ``` or heroku: ``` $ foreman start ```
 
 ## Design Explanation
+
+### Data Model
+
+### Data Storage
+
+### Rest API
+
+### Presentation
+
+### Tradeoffs
+
+### Extension Points
+
+
+## Time Logged
 
 
 
