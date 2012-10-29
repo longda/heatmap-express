@@ -15,7 +15,12 @@ The ultimate goal of this system would be to generate a heat map overlaid on top
 Please document how much time you spend completing this task, as well as any notes you feel are relevant. Also be prepared to defend your choices in terms of scalability, extensibility, and maintainability.
 
 ## Installation and Setup
+1. Install [Node with NPM](http://nodejs.org/)
+2. Download code from github
+3. cd into the heatmap-express directory
+4. Run the following command in the terminal to install all the packages:
 
+     npm install
 
 
 ## Design Explanation
