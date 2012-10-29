@@ -22,10 +22,16 @@ Please document how much time you spend completing this task, as well as any not
 6. Run the app using node: ``` $ node app.js ``` or heroku: ``` $ foreman start ```
 
 ## Design Explanation
-This sample pertains primarily to the storage system for events generated from "the game" and made into a REST API. At
-this time, no considerations have been made as to security regarding the calls into the API.
+This sample pertains primarily to the storage system for events generated from some game, storage and retrieval via calls
+into a REST API, and one sample display in a web application. At this time, no considerations have been made as to
+security regarding the calls into the API.
 
 ### Data Model
+The data model used for this app is a simple and flexible using the equivalent of foreign key ids from a relational model
+for common objects such as users (killer/killed), maps, weapons, etc.  These could be references into a relational system
+or embedded documents of a NO SQL system such as Mongo.  Since these would be extremely redundant if embedded into 
+thousands of records, I've chosen to just use foreign keys for now.  It is assumed that a reference of map id 1 would be
+resolved trivially via a master map list or a GetMapById() call.
 
 ### Data Storage
 
