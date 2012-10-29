@@ -19,7 +19,8 @@ Please document how much time you spend completing this task, as well as any not
 2. Download code from github
 3. cd into the heatmap-express directory: ``` $ cd heatmap-express ```
 4. Install all the packages: ``` $ npm install ```
-5. Run the app using node: ``` $ node app.js ``` or heroku: ``` $ foreman start ```
+5. *(Optional)* Change the mongo db connection string in /routes/api.js to point to your instance of mongo db
+6. Run the app using node: ``` $ node app.js ``` or heroku: ``` $ foreman start ```
 
 ## Design Explanation
 
