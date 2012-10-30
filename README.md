@@ -69,8 +69,8 @@ scaled up via a SAAS provider such as MongoLab.
 * Instrument and performance test the system and its components with a tool such as New Relic
 
 ## Time Logged
-
-
+* Tuesday, Oct. 23rd - 30 mins of research into heat map libraries mostly + a bit of logistics around Node based solution
+* 
 
 ## Technologies Used
 
