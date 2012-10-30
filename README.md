@@ -37,7 +37,9 @@ resolved trivially via a master map list or a GetMapById() call.
 Primary storage for this system is Mongo DB via MongoLab, a SAAS provider for Mongo storage.  Using a SAAS solution, one
 has the ability to scale up the service as required and limit the amount of overhead required for system administration.
 The GetDataByMapId() call uses a Map Reduce function to aggregate kill data by coordinate.  Additional filters could be
-used to get different events, specify a weapon, etc.
+used to get different events, specify a weapon, etc.  Mongo as a data store is ideal because it is quick to right to, the
+data is really not relational per se, and as changes to this data are required, we do not need to go back and change a 
+schema on a "table" of millions of rows of data as would be required with RDMSes.
 
 ### REST API
 Basic REST calls are available via the HTTP verbs POST, PUT, DELETE, and GET.  Additionally, a populate method is
