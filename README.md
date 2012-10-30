@@ -65,6 +65,8 @@ scaled up via a SAAS provider such as MongoLab.
 * Caching, both between the client and the services as well as between the services and the data store
 * More filtering of data for various maps, weapons, times of day, etc
 * Further aggregation of data via offline processes that run periodically to compact data into required forms
+* Scale the solution up via SAAS providers such as Heroku and MongoLab
+* Instrument and performance test the system and its components with a tool such as New Relic
 
 ## Time Logged
 
@@ -78,6 +80,7 @@ scaled up via a SAAS provider such as MongoLab.
 * [Jquery](http://jquery.com/)
 * [Jade](http://jade-lang.com/)
 * [Stylus](http://learnboost.github.com/stylus/)
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 * [Mongo DB](http://www.mongodb.org/)
 * [Mongoose](http://mongoosejs.com/)
 * [Heroku](http://www.heroku.com/)
