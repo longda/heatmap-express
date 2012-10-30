@@ -42,16 +42,29 @@ used to get different events, specify a weapon, etc.
 ### REST API
 Basic REST calls are available via the HTTP verbs POST, PUT, DELETE, and GET.  Additionally, a populate method is
 included to create a number of test events to use as data on heatmaps and test the system.  The actual heatmap app uses
-a GetDataByMapId() call to retrieve formatted data that the heatmap.js library can use.  Since we're using a simple
+a GetDataByMapId() call to retrieve formatted data that the heatmap.js library can use.  Node and Express provide an easy
+way to setup and create REST services as well serve web documents/assets. Since we're using a simple
 REST API, a logical addition here would be to add caching via a http cache such as Squid (between clients and the service)
 or data caching tier (between the service and the data store).
 
 ### Presentation
+Presentation relies on the core of Node and Express coupled with Jade templating and Stylus for CSS styling.  For the
+mapping library, I've used Heatmap.js which simplifies the display of heatmap data based on inputted JSON data and HTML5
+canvas.  The map image used is borrowed from Call of Duty Elite and is meant simply as a visual placeholder.  Twitter
+bootstrap is included but was not used due to time constraints.  This library provides a simple, consistent UI that is
+tasteful and easy for developers to leverage.
 
 ### Tradeoffs
+I chose a quickly bootstrapped system to be used as this proof of concept.  Most, if not all, of the technologies could
+be easily swapped out in preference of something else.  However, due to the asynchronous nature of Node, this system 
+should be able to scale fairly well by creating a cluster of instances (scaling out) or increasing the number of dynos
+running underneath on Heroku (scaling up).  The same could be said for the data store since Mongo can be clustered or
+scaled up via a SAAS provider such as MongoLab.
 
 ### Extension Points
-
+* Caching, both between the client and the services as well as between the services and the data store
+* More filtering of data for various maps, weapons, times of day, etc
+* Further aggregation of data via offline processes that run periodically to compact data into required forms
 
 ## Time Logged
 
