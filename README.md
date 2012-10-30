@@ -34,8 +34,17 @@ thousands of records, I've chosen to just use foreign keys for now.  It is assum
 resolved trivially via a master map list or a GetMapById() call.
 
 ### Data Storage
+Primary storage for this system is Mongo DB via MongoLab, a SAAS provider for Mongo storage.  Using a SAAS solution, one
+has the ability to scale up the service as required and limit the amount of overhead required for system administration.
+The GetDataByMapId() call uses a Map Reduce function to aggregate kill data by coordinate.  Additional filters could be
+used to get different events, specify a weapon, etc.
 
 ### REST API
+Basic REST calls are available via the HTTP verbs POST, PUT, DELETE, and GET.  Additionally, a populate method is
+included to create a number of test events to use as data on heatmaps and test the system.  The actual heatmap app uses
+a GetDataByMapId() call to retrieve formatted data that the heatmap.js library can use.  Since we're using a simple
+REST API, a logical addition here would be to add caching via a http cache such as Squid (between clients and the service)
+or data caching tier (between the service and the data store).
 
 ### Presentation
 
