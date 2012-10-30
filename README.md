@@ -70,7 +70,10 @@ scaled up via a SAAS provider such as MongoLab.
 
 ## Time Logged
 * Tuesday, Oct. 23rd - 30 mins of research into heat map libraries mostly + a bit of logistics around Node based solution
-* 
+* Wednesday, Oct. 24th - 6 hours of setup of infrastructure for server, api, routing, data store, heat map libraries
+* Thursday, Oct. 26th - 3 hours finalizing data structure for storage and heat map library integration, finishing rest api verb buildout
+* Monday, Oct. 29th - 1 hour of writeup
+* Tuesday, Oct. 30th - 1 hour of writeup 
 
 ## Technologies Used
 
