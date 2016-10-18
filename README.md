@@ -1,3 +1,7 @@
+<img src="http://i.giphy.com/3oEjI9pc6JMtWJDCo0.gif" alt="heatmap" />
+
+:city_sunrise: Code sample for generating heatmaps using node, mongo, and javascript.
+
 # Heatmap Express
 A coding sample... In order to gain visibility into how our players are experiencing our game, we want to collect data about each player death. This event would include such values as their location and how they died.
  
